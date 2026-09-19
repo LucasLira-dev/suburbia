@@ -1,0 +1,12 @@
+{
+  "repositoryName": "suburbia2xl",
+  "libraries": [
+    "./slices"
+  ],
+  "routes": [
+    {
+      "type": "homepage",
+      "path": "/"
+    }
+  ]
+}
