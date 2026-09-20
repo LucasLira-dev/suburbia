@@ -33,6 +33,7 @@ export const Header = () => {
                     href="/"
                     size="md"
                     icon="cart"
+                    color="purple"
                     >
                         <span className="hidden sm:inline">Cart </span>(1)
                     </ButtonLink>

@@ -27,8 +27,8 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 				<WideLogo className="text-brand-purple animate-squiggle w-full hidden opacity-20 mix-blend-multiply lg:block" />
 			</div>
 
-			<div className="grid grid-rows-[1fr,auto] absolute inset-0 mx-auto place-items-end max-w-6xl px-6 mt-36">
-				<h1 className="text-5xl font-sans font-bold md:text-6xl relative max-w-lg place-self-start">
+			<div className="grid grid-rows-[1fr,auto] absolute inset-0 mx-auto place-items-end max-w-6xl px-6 mt-36 mb-10">
+				<h1 className="text-5xl font-sans font-bold md:text-7xl relative max-w-lg place-self-start">
 					<PrismicText field={slice.primary.heading} />
 				</h1>
 				<div className="flex relative w-full flex-col items-center justify-between gap-3 lg:flex-row">
@@ -39,7 +39,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 					field={slice.primary.button} 
 					icon="skateboard" 
 					size="lg"
-					className="z-20 mt-2 block button-cutout">
+					className="z-20 mt-2 block">
 						{slice.primary.button.text}
 					</ButtonLink>
 				</div>

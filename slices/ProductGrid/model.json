@@ -1,0 +1,64 @@
+{
+  "description": "ProductGrid",
+  "id": "product_grid",
+  "name": "ProductGrid",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/suburbia2xl/shared-slices/product_grid/default/826c95fdf1ca06e8bdc58bbc9eed266307077c4d.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "allowTargetBlank": false,
+            "label": "Heading",
+            "placeholder": "",
+            "single": "heading1"
+          },
+          "type": "StructuredText"
+        },
+        "body": {
+          "config": {
+            "allowTargetBlank": false,
+            "label": "Body",
+            "placeholder": "",
+            "single": "paragraph,strong,em"
+          },
+          "type": "StructuredText"
+        },
+        "product": {
+          "config": {
+            "fields": {
+              "skateboard": {
+                "config": {
+                  "customtypes": [
+                    {
+                      "fields": [
+                        "title",
+                        "image",
+                        "price_cents",
+                        "customizer_link"
+                      ],
+                      "id": "skateboard"
+                    }
+                  ],
+                  "label": "Skateboard",
+                  "repeat": false,
+                  "select": "document"
+                },
+                "type": "Link"
+              }
+            },
+            "label": "Product",
+            "repeat": true
+          },
+          "type": "Group"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}

@@ -8,6 +8,9 @@
           "choices": {
             "hero": {
               "type": "SharedSlice"
+            },
+            "product_grid": {
+              "type": "SharedSlice"
             }
           }
         },
@@ -19,14 +22,14 @@
       "meta_title": {
         "config": {
           "label": "Meta Title",
-          "placeholder": "A title of the page used for social media and search engines"
+          "placeholder": "Suburbia Skateboards"
         },
         "type": "Text"
       },
       "meta_description": {
         "config": {
           "label": "Meta Description",
-          "placeholder": "A brief summary of the page"
+          "placeholder": "The best Skateboards"
         },
         "type": "Text"
       },
