@@ -1,0 +1,25 @@
+{
+  "description": "VideoBlock",
+  "id": "video_block",
+  "name": "VideoBlock",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/suburbia2xl/shared-slices/video_block/default/a995e3237784646b6a25a3bff9dc3f8e56f75c2f.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "youtube_id": {
+          "config": {
+            "label": "youtubeId",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}
