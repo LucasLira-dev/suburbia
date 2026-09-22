@@ -1,0 +1,144 @@
+{
+  "description": "ImageAndText",
+  "id": "image_and_text",
+  "name": "ImageAndText",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/suburbia2xl/shared-slices/image_and_text/default/2842678662bfa567deac389bc3fac59e4934ce78.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "theme": {
+          "config": {
+            "label": "Theme",
+            "options": [
+              "Blue",
+              "Orange",
+              "Navy",
+              "Lime"
+            ],
+            "placeholder": ""
+          },
+          "type": "Select"
+        },
+        "heading": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Heading",
+            "multi": "heading1,heading2,strong,em",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "body": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Body",
+            "multi": "paragraph,strong,em",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "button": {
+          "config": {
+            "allowTargetBlank": true,
+            "allowText": true,
+            "label": "Button",
+            "placeholder": "",
+            "repeat": false,
+            "select": null
+          },
+          "type": "Link"
+        },
+        "background_image": {
+          "config": {
+            "constraint": {},
+            "label": "Background Image",
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "foreground_image": {
+          "config": {
+            "constraint": {},
+            "label": "Foreground Image",
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      },
+      "version": "initial"
+    },
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "imageOnLeft",
+      "imageUrl": "https://images.prismic.io/suburbia2xl/shared-slices/image_and_text/imageOnLeft/886ebf3527008145b49b4794cf0e4ffb114a8e3f.png?auto=compress%2Cformat",
+      "name": "Image on Left",
+      "primary": {
+        "theme": {
+          "config": {
+            "label": "Theme",
+            "options": [
+              "Blue",
+              "Orange",
+              "Navy",
+              "Lime"
+            ],
+            "placeholder": ""
+          },
+          "type": "Select"
+        },
+        "heading": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Heading",
+            "multi": "heading1,heading2,strong,em",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "body": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Body",
+            "multi": "paragraph,strong,em",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        },
+        "button": {
+          "config": {
+            "allowTargetBlank": true,
+            "allowText": true,
+            "label": "Button",
+            "placeholder": "",
+            "repeat": false,
+            "select": null
+          },
+          "type": "Link"
+        },
+        "background_image": {
+          "config": {
+            "constraint": {},
+            "label": "Background Image",
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "foreground_image": {
+          "config": {
+            "constraint": {},
+            "label": "Foreground Image",
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}

@@ -55,6 +55,7 @@ export async function SkateboardProduct({ id }: SkateboardProductProps) {
             className="overflow-hidden items-center -mb-1 px-8">
                 <Scribble color={dominantColor} className="absolute inset-0 w-full h-full"/>
                 <PrismicNextImage 
+                fallbackAlt=""
                 height={130} 
                 field={skateboard.data.image} 
                 width={130} 

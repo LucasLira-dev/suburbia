@@ -46,7 +46,7 @@ type ContentRelationshipFieldWithData<
 		>
 }[Exclude<TCustomType[number], string>["id"]];
 
-type HomepageDocumentDataSlicesSlice = HeroSlice | ProductGridSlice
+type HomepageDocumentDataSlicesSlice = HeroSlice | ProductGridSlice | ImageAndTextSlice
 
 /**
  * Content for Homepage documents
@@ -302,6 +302,168 @@ type HeroSliceVariation = HeroSliceDefault
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Primary content in *ImageAndText → Default → Primary*
+ */
+export interface ImageAndTextSliceDefaultPrimary {
+	/**
+	 * Theme field in *ImageAndText → Default → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.default.primary.theme
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	theme: prismic.SelectField<"Blue" | "Orange" | "Navy" | "Lime">;
+	
+	/**
+	 * Heading field in *ImageAndText → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.default.primary.heading
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	heading: prismic.RichTextField;
+	
+	/**
+	 * Body field in *ImageAndText → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.default.primary.body
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	body: prismic.RichTextField;
+	
+	/**
+	 * Button field in *ImageAndText → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.default.primary.button
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+	
+	/**
+	 * Background Image field in *ImageAndText → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.default.primary.background_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	background_image: prismic.ImageField<never>;
+	
+	/**
+	 * Foreground Image field in *ImageAndText → Default → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.default.primary.foreground_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	foreground_image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for ImageAndText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ImageAndTextSliceDefault = prismic.SharedSliceVariation<"default", Simplify<ImageAndTextSliceDefaultPrimary>, never>;
+
+/**
+ * Primary content in *ImageAndText → Image on Left → Primary*
+ */
+export interface ImageAndTextSliceImageOnLeftPrimary {
+	/**
+	 * Theme field in *ImageAndText → Image on Left → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.imageOnLeft.primary.theme
+	 * - **Documentation**: https://prismic.io/docs/fields/select
+	 */
+	theme: prismic.SelectField<"Blue" | "Orange" | "Navy" | "Lime">;
+	
+	/**
+	 * Heading field in *ImageAndText → Image on Left → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.imageOnLeft.primary.heading
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	heading: prismic.RichTextField;
+	
+	/**
+	 * Body field in *ImageAndText → Image on Left → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.imageOnLeft.primary.body
+	 * - **Documentation**: https://prismic.io/docs/fields/rich-text
+	 */
+	body: prismic.RichTextField;
+	
+	/**
+	 * Button field in *ImageAndText → Image on Left → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.imageOnLeft.primary.button
+	 * - **Documentation**: https://prismic.io/docs/fields/link
+	 */
+	button: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+	
+	/**
+	 * Background Image field in *ImageAndText → Image on Left → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.imageOnLeft.primary.background_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	background_image: prismic.ImageField<never>;
+	
+	/**
+	 * Foreground Image field in *ImageAndText → Image on Left → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: image_and_text.imageOnLeft.primary.foreground_image
+	 * - **Documentation**: https://prismic.io/docs/fields/image
+	 */
+	foreground_image: prismic.ImageField<never>;
+}
+
+/**
+ * Image on Left variation for ImageAndText Slice
+ *
+ * - **API ID**: `imageOnLeft`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ImageAndTextSliceImageOnLeft = prismic.SharedSliceVariation<"imageOnLeft", Simplify<ImageAndTextSliceImageOnLeftPrimary>, never>;
+
+/**
+ * Slice variation for *ImageAndText*
+ */
+type ImageAndTextSliceVariation = ImageAndTextSliceDefault | ImageAndTextSliceImageOnLeft
+
+/**
+ * ImageAndText Shared Slice
+ *
+ * - **API ID**: `image_and_text`
+ * - **Description**: ImageAndText
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ImageAndTextSlice = prismic.SharedSlice<"image_and_text", ImageAndTextSliceVariation>;
+
+/**
  * Item in *ProductGrid → Default → Primary → Product*
  */
 export interface ProductGridSliceDefaultPrimaryProductItem {
@@ -402,6 +564,12 @@ declare module "@prismicio/client" {
 			HeroSliceDefaultPrimary,
 			HeroSliceVariation,
 			HeroSliceDefault,
+			ImageAndTextSlice,
+			ImageAndTextSliceDefaultPrimary,
+			ImageAndTextSliceImageOnLeftPrimary,
+			ImageAndTextSliceVariation,
+			ImageAndTextSliceDefault,
+			ImageAndTextSliceImageOnLeft,
 			ProductGridSlice,
 			ProductGridSliceDefaultPrimaryProductItem,
 			ProductGridSliceDefaultPrimary,
