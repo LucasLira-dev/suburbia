@@ -1,0 +1,27 @@
+{
+  "description": "TeamGrid",
+  "id": "team_grid",
+  "name": "TeamGrid",
+  "type": "SharedSlice",
+  "variations": [
+    {
+      "description": "Default",
+      "docURL": "...",
+      "id": "default",
+      "imageUrl": "https://images.prismic.io/suburbia2xl/shared-slices/team_grid/default/db4738b1d654d0a4f022c7dad41f4c58ca0ea5f5.png?auto=compress%2Cformat",
+      "name": "Default",
+      "primary": {
+        "heading": {
+          "config": {
+            "allowTargetBlank": true,
+            "label": "Heading",
+            "multi": "heading1,heading2,em,strong",
+            "placeholder": ""
+          },
+          "type": "StructuredText"
+        }
+      },
+      "version": "initial"
+    }
+  ]
+}

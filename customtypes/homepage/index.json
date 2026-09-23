@@ -17,6 +17,9 @@
             },
             "video_block": {
               "type": "SharedSlice"
+            },
+            "team_grid": {
+              "type": "SharedSlice"
             }
           }
         },

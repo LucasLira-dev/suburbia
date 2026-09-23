@@ -20,26 +20,14 @@
   --animate-squiggle: squiggle 0.5s infinite;
 }
 
-@keyframes squiggle {
-  0% {
-    filter: url("#squiggle-0");
-  }
+.skater-scribble-path {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  transition: stroke-dashoffset 0.8s ease, opacity 0.5s ease;
+}
 
-  25% {
-    filter: url("#squiggle-1");
-  }
-
-  50% {
-    filter: url("#squiggle-2");
-  }
-
-  75% {
-    filter: url("#squiggle-3");
-  }
-
-  100% {
-    filter: url("#squiggle-4");
-  }
+.group:hover .skater-scribble-path {
+  stroke-dashoffset: 0;
 }
 
 /* @media (prefers-color-scheme: dark) {
