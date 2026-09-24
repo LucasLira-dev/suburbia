@@ -50,6 +50,31 @@
           "repeat": true
         },
         "type": "Group"
+      },
+      "footer_image": {
+        "config": {
+          "constraint": {},
+          "label": "Footer Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "footer_skateboards": {
+        "config": {
+          "fields": {
+            "skateboard": {
+              "config": {
+                "constraint": {},
+                "label": "Skateboard",
+                "thumbnails": []
+              },
+              "type": "Image"
+            }
+          },
+          "label": "Footer Skateboards",
+          "repeat": true
+        },
+        "type": "Group"
       }
     }
   },
