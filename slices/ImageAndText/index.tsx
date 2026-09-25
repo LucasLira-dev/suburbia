@@ -5,6 +5,7 @@ import { Bounded } from "@/components/Bounded";
 import clsx from "clsx";
 import { ButtonLink } from "@/components/ButtonLink";
 import { ParallaxImage } from "./ParallaxImage";
+import { SlideIn } from "@/components/SlideIn";
 
 /**
  * Props for `ImageAndText`.
@@ -44,17 +45,23 @@ const ImageAndText: FC<ImageAndTextProps> = ({ slice, index }) => {
 					slice.variation === "imageOnLeft" && "md:order-2"
 				)}>
 					<h1 className="text-5xl font-sans font-bold md:text-5xl lg:text-7xl relative max-w-sm">
-						<PrismicText field={slice.primary.heading} />
+						<SlideIn>
+							<PrismicText field={slice.primary.heading} />
+						</SlideIn>
 					</h1>
 					<div className="max-w-md text-lg leading-relaxed font-mono">
-						<PrismicRichText field={slice.primary.body} />
+						<SlideIn delay={0.2}>
+							<PrismicRichText field={slice.primary.body} />
+						</SlideIn>
 					</div>
-					<ButtonLink
-					href={'/'}
-					color={theme === "Lime" ? "orange" : "lime"}
-					>
-						{slice.primary.button.text}
-					</ButtonLink>
+					<SlideIn delay={0.2}>
+						<ButtonLink
+						href={'/'}
+						color={theme === "Lime" ? "orange" : "lime"}
+						>
+							{slice.primary.button.text}
+						</ButtonLink>
+					</SlideIn>
 				</div>
 				<ParallaxImage
 					foregroundImage={slice.primary.foreground_image}

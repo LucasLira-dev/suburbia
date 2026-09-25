@@ -4,6 +4,7 @@ import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { Bounded } from "@/components/Bounded";
 import { isFilled } from "@prismicio/client";
 import { SkateboardProduct } from "./SkateboardProduct";
+import { SlideIn } from "@/components/SlideIn";
 
 /**
  * Props for `ProductGrid`.
@@ -25,11 +26,15 @@ const ProductGrid: FC<ProductGridProps> = ({ slice }) => {
 			className="mt-16 mb-14">
 				<div
 				className="text-4xl font-sans font-extrabold md:text-7xl relative text-center">
-					<PrismicRichText field={slice.primary.heading} />
+					<SlideIn>
+						<PrismicRichText field={slice.primary.heading} />
+					</SlideIn>
 				</div>
 				<div
 				className="text-md mx-auto mt-4 text-center font-mono font-extralight">
-					<PrismicRichText field={slice.primary.body} />
+					<SlideIn>
+						<PrismicRichText field={slice.primary.body} />
+					</SlideIn>
 				</div>
 				<div className="grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 mt-4">
 					{slice.primary.product.map((skateboard) =>

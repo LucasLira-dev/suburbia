@@ -55,8 +55,7 @@ export async function SkateboardProduct({ id }: SkateboardProductProps) {
             className="overflow-hidden items-center -mb-1 px-8">
                 <Scribble color={dominantColor} className="absolute inset-0 w-full h-full"/>
                 <PrismicNextImage 
-                fallbackAlt=""
-                height={130} 
+                alt=""
                 field={skateboard.data.image} 
                 width={130} 
                 className="mx-auto w-[78%] max-w-32.5 pb-4 origin-top transform-cpu transition-transform duration-500 ease-in-out group-hover:scale-140"/>
